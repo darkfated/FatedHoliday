@@ -23,5 +23,5 @@ FatedHoliday.config.prizes = {
         func = function(pl)
             pl:AddIGSFunds(120, 'Подарок на праздник') -- Сделано через IGS донат
         end
-    },
+    }
 }

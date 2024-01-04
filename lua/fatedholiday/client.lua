@@ -159,9 +159,3 @@ end
 net.Receive('FatedHoliday-StartEvent', function()
     FireworkEffect()
 end)
-
-hook.Add('KeyPress', 'FatedHoliday.CreateStars', function(ply, key)
-    if key == IN_ATTACK then
-        FireworkEffect()
-    end
-end)
