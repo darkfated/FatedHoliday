@@ -2,17 +2,14 @@
     * FatedHoliday *
     GitHub: https://github.com/darkfated/fatedholiday
     Author's discord: darkfated
-]]
+]]--
 
 local function run_scripts()
-    local cl = SERVER and AddCSLuaFile or include
-    local sv = SERVER and include or function() end
-
-    cl('config.lua')
-    sv('config.lua')
+    Mantle.run_cl('config.lua')
+    Mantle.run_sv('config.lua')
     
-    cl('client.lua')
-    sv('server.lua')
+    Mantle.run_cl('client.lua')
+    Mantle.run_sv('server.lua')
 end
 
 local function init()
