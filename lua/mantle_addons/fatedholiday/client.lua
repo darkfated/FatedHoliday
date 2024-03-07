@@ -16,7 +16,7 @@ function FormatTime(seconds)
 end
 
 local function Paint()
-    local time_left = os.difftime(FatedHoliday.config.time, os.time())
+    local time_left = os.difftime(FatedHoliday.config.time, os.time()) - FatedHoliday.time_difference
 
     if time_left < 0 then
         return
@@ -158,4 +158,10 @@ end
 
 net.Receive('FatedHoliday-StartEvent', function()
     FireworkEffect()
+end)
+
+net.Receive('FatedHoliday-GetTimeZone', function()
+    local server_time = net.ReadUInt(32)
+
+    FatedHoliday.time_difference = os.time() - server_time
 end)

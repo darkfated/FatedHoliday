@@ -1,5 +1,6 @@
 util.AddNetworkString('FatedHoliday-StartEvent')
 util.AddNetworkString('FatedHoliday-GetPrize')
+util.AddNetworkString('FatedHoliday-GetTimeZone')
 
 local function CheckHoliday()
     local time_left = os.difftime(FatedHoliday.config.time, os.time())
@@ -39,4 +40,8 @@ hook.Add('PlayerInitialSpawn', 'FatedHoliday.CheckPrize', function(pl)
     if pl:GetPData('fh_prize_received') == '1' and os.difftime(FatedHoliday.config.time, os.time()) > 0 then
         pl:SetPData('fh_prize_received', nil)
     end
+
+    net.Start('FatedHoliday-GetTimeZone')
+        net.WriteUInt(os.time(), 32)
+    net.Send(pl)
 end)
