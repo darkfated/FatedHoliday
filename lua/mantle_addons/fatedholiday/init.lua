@@ -14,8 +14,7 @@ end
 
 local function init()
     if SERVER then
-        resource.AddFile('materials/fatedholiday/star.png')
-        resource.AddFile('sound/fatedholiday/background.mp3')
+        resource.AddWorkshop('3174879451')
     end
 
     FatedHoliday = FatedHoliday or {
