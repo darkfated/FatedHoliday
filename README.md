@@ -1,7 +1,7 @@
 # FatedHoliday
-Congratulate your players on the Gmod server! After a certain date and time, players will play a pleasant animation with sound, and then a menu with a gift selection will appear
+Поздравьте своих игроков на сервере Gmod! После определённой даты и времени игрокам будет воспроизведена приятная анимация со звуком, а затем появится меню с выбором подарка.
 
-🔧 [Mantle](https://github.com/darkfated/mantle): in order for the system to work, you need to use this Gmod library
+🔧 [Mantle](https://github.com/darkfated/mantle): для работы системы необходимо использовать эту библиотеку для Gmod
 
-## Video 📽️
-[Watch on YouTube](https://youtu.be/Mg-9J56-4ZI)
+## Видео 📽️
+[Смотреть на YouTube](https://youtu.be/Mg-9J56-4ZI)
